@@ -1,4 +1,4 @@
-import { C } from '../constants/theme'
+import { C } from '../../constants/theme'
 
 /**
  * A reusable rating component that displays 5 stars.

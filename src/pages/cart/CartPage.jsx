@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { useCart } from '../hooks/useCart'
-import { useAuth } from '../hooks/useAuth'
-import { C, FONTS } from '../constants/theme'
-import QtyControl from '../components/QtyControl'
-import OrderSummary from '../components/OrderSummary'
+import { useCart } from '../../hooks/useCart'
+import { useAuth } from '../../hooks/useAuth'
+import { C, FONTS } from '../../constants/theme'
+import QtyControl from '../../components/product/QtyControl'
+import OrderSummary from '../../components/cart/OrderSummary'
 
 export default function CartPage() {
   // Global context hooks for cart and authentication

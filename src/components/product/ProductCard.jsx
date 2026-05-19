@@ -1,8 +1,8 @@
 import { useNavigate } from 'react-router-dom'
-import { useCart } from '../hooks/useCart'
-import { useWishlist } from '../contexts/WishlistContext'
-import { useToast } from '../contexts/ToastContext'
-import Stars from './Stars'
+import { useCart } from '../../hooks/useCart'
+import { useWishlist } from '../../contexts/WishlistContext'
+import { useToast } from '../../contexts/ToastContext'
+import Stars from '../ui/Stars'
 
 export default function ProductCard({ product }) {
   const navigate = useNavigate()

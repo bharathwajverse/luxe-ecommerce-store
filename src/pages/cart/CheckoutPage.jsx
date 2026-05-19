@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { useCart } from '../hooks/useCart'
-import { useAuth } from '../hooks/useAuth'
-import { C, FONTS, inputStyle, inputErrorStyle } from '../constants/theme'
-import { validateShipping, validatePayment, formatCard, formatExpiry, generateOrderId } from '../utils/validators'
-import { getOrdersKey } from '../contexts/AuthContext'
-import FormField from '../components/FormField'
-import OrderSummary from '../components/OrderSummary'
+import { useCart } from '../../hooks/useCart'
+import { useAuth } from '../../hooks/useAuth'
+import { C, FONTS, inputStyle, inputErrorStyle } from '../../constants/theme'
+import { validateShipping, validatePayment, formatCard, formatExpiry, generateOrderId } from '../../utils/validators'
+import { getOrdersKey } from '../../contexts/AuthContext'
+import FormField from '../../components/ui/FormField'
+import OrderSummary from '../../components/cart/OrderSummary'
 
 // Steps in the checkout process
 let STEPS = ['Shipping', 'Payment', 'Review']

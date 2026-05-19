@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { useAuth } from '../hooks/useAuth'
-import { getOrdersKey } from '../contexts/AuthContext'
-import { C } from '../constants/theme'
+import { useAuth } from '../../hooks/useAuth'
+import { getOrdersKey } from '../../contexts/AuthContext'
+import { C } from '../../constants/theme'
 
 const STATUS_STEPS = ['confirmed', 'processing', 'shipped', 'delivered']
 

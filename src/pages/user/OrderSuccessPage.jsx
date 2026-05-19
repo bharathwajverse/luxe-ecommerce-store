@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
-import { C } from '../constants/theme'
+import { C } from '../../constants/theme'
 
 export default function OrderSuccessPage() {
   const navigate = useNavigate()

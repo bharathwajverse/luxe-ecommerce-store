@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useNavigate, useLocation, Link } from 'react-router-dom'
-import { useAuth } from '../hooks/useAuth'
-import { C } from '../constants/theme'
+import { useAuth } from '../../hooks/useAuth'
+import { C } from '../../constants/theme'
 
 const inputStyle = {
   width: '100%',

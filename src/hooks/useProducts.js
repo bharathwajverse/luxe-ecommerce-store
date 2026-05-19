@@ -1,8 +1,5 @@
 import { useState, useEffect } from 'react'
-import axios from 'axios'
-
-// Base URL for our product API
-const API_URL = 'https://dummyjson.com'
+import api from '../services/api'
 
 // Mapping of granular API categories to consolidated hierarchical "Flipkart-style" categories
 const CATEGORY_MAP = {
@@ -93,7 +90,7 @@ export function useProducts() {
         setLoading(true)
         setError(null)
 
-        let response = await axios.get(API_URL + '/products?limit=0')
+        let response = await api.get('/products?limit=0')
         let data = response.data
 
         if (!isCancelled) {
@@ -139,7 +136,7 @@ export function useProduct(id) {
         setLoading(true)
         setError(null)
 
-        let response = await axios.get(API_URL + '/products/' + id)
+        let response = await api.get('/products/' + id)
         let data = response.data
 
         if (!isCancelled) {
@@ -171,8 +168,8 @@ export function useCategories() {
   const [categories, setCategories] = useState(['all'])
 
   useEffect(function () {
-    axios
-      .get(API_URL + '/products/categories')
+    api
+      .get('/products/categories')
       .then(function (response) {
         let mapped = response.data
           .filter(cat => !EXCLUDED_CATEGORIES.includes(cat.slug))

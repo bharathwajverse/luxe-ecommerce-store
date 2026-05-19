@@ -1,10 +1,10 @@
 import { useLocation, useNavigate } from 'react-router-dom'
 import { useState, useMemo, useEffect } from 'react'
-import { useProducts } from '../hooks/useProducts'
-import { useTheme } from '../contexts/ThemeContext'
-import ProductCard from '../components/ProductCard'
-import Spinner from '../components/Spinner'
-import { C } from '../constants/theme'
+import { useProducts } from '../../hooks/useProducts'
+import { useTheme } from '../../contexts/ThemeContext'
+import ProductCard from '../../components/product/ProductCard'
+import Spinner from '../../components/ui/Spinner'
+import { C } from '../../constants/theme'
 
 export default function SearchPage() {
   const { search } = useLocation()

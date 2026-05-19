@@ -1,10 +1,10 @@
 import { useState, useEffect, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { useProducts } from '../hooks/useProducts'
-import ProductCard from '../components/ProductCard'
-import Spinner from '../components/Spinner'
-import { C } from '../constants/theme'
-import { CATEGORY_MAPPING } from '../constants/products'
+import { useProducts } from '../../hooks/useProducts'
+import ProductCard from '../../components/product/ProductCard'
+import Spinner from '../../components/ui/Spinner'
+import { C } from '../../constants/theme'
+import { CATEGORY_MAPPING } from '../../constants/products'
 
 export default function OffersPage() {
   const { products, loading } = useProducts()

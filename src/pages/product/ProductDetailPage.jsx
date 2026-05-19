@@ -1,13 +1,13 @@
 import { useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import { useCart } from '../hooks/useCart'
-import { useWishlist } from '../contexts/WishlistContext'
-import { useProduct, useProducts } from '../hooks/useProducts'
-import { C } from '../constants/theme'
-import Spinner from '../components/Spinner'
-import Stars from '../components/Stars'
-import QtyControl from '../components/QtyControl'
-import ProductCard from '../components/ProductCard'
+import { useCart } from '../../hooks/useCart'
+import { useWishlist } from '../../contexts/WishlistContext'
+import { useProduct, useProducts } from '../../hooks/useProducts'
+import { C } from '../../constants/theme'
+import Spinner from '../../components/ui/Spinner'
+import Stars from '../../components/ui/Stars'
+import QtyControl from '../../components/product/QtyControl'
+import ProductCard from '../../components/product/ProductCard'
 
 export default function ProductDetailPage() {
   // Extract the product ID from the URL parameters

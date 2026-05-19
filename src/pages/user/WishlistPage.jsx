@@ -1,6 +1,6 @@
-import { useWishlist } from '../contexts/WishlistContext'
-import ProductCard from '../components/ProductCard'
-import { C } from '../constants/theme'
+import { useWishlist } from '../../contexts/WishlistContext'
+import ProductCard from '../../components/product/ProductCard'
+import { C } from '../../constants/theme'
 import { useNavigate } from 'react-router-dom'
 
 /**

@@ -1,11 +1,11 @@
 import { useParams, useNavigate, useLocation } from 'react-router-dom'
 import { useState, useMemo } from 'react'
-import { useProducts } from '../hooks/useProducts'
-import { useTheme } from '../contexts/ThemeContext'
-import ProductCard from '../components/ProductCard'
-import Spinner from '../components/Spinner'
-import { C } from '../constants/theme'
-import { CATEGORY_MAPPING } from '../constants/products'
+import { useProducts } from '../../hooks/useProducts'
+import { useTheme } from '../../contexts/ThemeContext'
+import ProductCard from '../../components/product/ProductCard'
+import Spinner from '../../components/ui/Spinner'
+import { C } from '../../constants/theme'
+import { CATEGORY_MAPPING } from '../../constants/products'
 
 export default function CategoryPage() {
   // Extract category from URL and handle navigation/location

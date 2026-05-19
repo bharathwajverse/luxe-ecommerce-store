@@ -1,4 +1,4 @@
-import { C } from '../constants/theme'
+import { C } from '../../constants/theme'
 
 /**
  * A reusable wrapper for form inputs that includes a label and 

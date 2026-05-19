@@ -1,4 +1,4 @@
-import { C } from '../constants/theme'
+import { C } from '../../constants/theme'
 
 /**
  * A loading indicator component that displays a centered spinning circle.

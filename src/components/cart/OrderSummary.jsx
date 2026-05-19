@@ -1,4 +1,4 @@
-import { C, FONTS } from '../constants/theme'
+import { C, FONTS } from '../../constants/theme'
 
 // Order summary sidebar - shows cart items and total price
 export default function OrderSummary({ cart, cartTotal, primaryAction }) {

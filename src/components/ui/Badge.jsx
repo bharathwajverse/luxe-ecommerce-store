@@ -1,4 +1,4 @@
-import { C } from '../constants/theme'
+import { C } from '../../constants/theme'
 
 /**
  * A reusable UI component that displays a small, colored badge.

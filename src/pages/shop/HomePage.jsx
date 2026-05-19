@@ -1,12 +1,12 @@
 import { useState, useMemo, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { C } from '../constants/theme'
-import { useProducts } from '../hooks/useProducts'
-import { useTheme } from '../contexts/ThemeContext'
+import { C } from '../../constants/theme'
+import { useProducts } from '../../hooks/useProducts'
+import { useTheme } from '../../contexts/ThemeContext'
 import { motion, AnimatePresence } from 'framer-motion'
-import { CATEGORY_MAPPING, CATEGORIES } from '../constants/products'
-import ProductCard from '../components/ProductCard'
-import Spinner from '../components/Spinner'
+import { CATEGORY_MAPPING, CATEGORIES } from '../../constants/products'
+import ProductCard from '../../components/product/ProductCard'
+import Spinner from '../../components/ui/Spinner'
 
 /**
  * Static configuration for the hero slider banners.

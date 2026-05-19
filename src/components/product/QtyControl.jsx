@@ -1,4 +1,4 @@
-import { C } from '../constants/theme'
+import { C } from '../../constants/theme'
 
 /**
  * A reusable UI component for adjusting item quantities.
