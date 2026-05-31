@@ -1,6 +1,12 @@
-# 🛍️ LUXE Store — Modern E-Commerce React App
+# 🛍️ FlipShop — Modern E-Commerce React App
 
 A fully-featured single-page e-commerce application built with React 18, React Router v6, Context API, and Vite.
+
+## 🌐 Live Demo
+
+This project is deployed on Vercel:
+
+https://flipshop-tawny.vercel.app/
 
 ## 🚀 Getting Started
 
@@ -8,7 +14,7 @@ A fully-featured single-page e-commerce application built with React 18, React R
 # 1. Install dependencies
 npm install
 
-# 2. Start development server (opens at http://localhost:3000)
+# 2. Start development server
 npm run dev
 
 # 3. Build for production
@@ -22,71 +28,99 @@ npm run preview
 
 ```
 src/
-├── main.jsx                  # App entry point
-├── App.jsx                   # Root component + routing
-├── index.css                 # Global styles & CSS reset
-│
+├── main.jsx
+├── App.jsx
+├── styles/index.css
 ├── constants/
-│   └── theme.js              # Design tokens (colors, fonts)
-│
+│   ├── products.js
+│   └── theme.js
+├── services/
+│   └── api.js
 ├── utils/
-│   └── validators.js         # Form validation helpers
-│
+│   └── validators.js
 ├── contexts/
-│   ├── AuthContext.jsx       # Auth state + login/logout
-│   ├── CartContext.jsx       # Cart state + localStorage sync
-│   └── RouterContext.jsx     # (unused — using React Router)
-│
+│   ├── AuthContext.jsx
+│   ├── CartContext.jsx
+│   ├── ThemeContext.jsx
+│   ├── ToastContext.jsx
+│   └── WishlistContext.jsx
 ├── hooks/
-│   ├── useAuth.js            # useContext(AuthContext)
-│   ├── useCart.js            # useContext(CartContext)
-│   └── useProducts.js        # Custom hook — API fetch + state
-│
+│   ├── useAuth.js
+│   ├── useCart.js
+│   └── useProducts.js
+├── layouts/
+│   ├── Footer.jsx
+│   ├── MainLayout.jsx
+│   └── Navbar.jsx
 ├── components/
-│   ├── Navbar.jsx            # Sticky navigation bar
-│   ├── ProductCard.jsx       # Product grid card
-│   ├── Spinner.jsx           # Loading indicator
-│   ├── Stars.jsx             # Star rating display
-│   ├── Badge.jsx             # Category / label badge
-│   ├── QtyControl.jsx        # +/- quantity selector
-│   ├── OrderSummary.jsx      # Checkout sidebar summary
-│   ├── FormField.jsx         # Labelled input wrapper
-│   └── ProtectedRoute.jsx    # Auth guard for routes
-│
-└── pages/
-    ├── HomePage.jsx          # / — Product grid + search + filter
-    ├── ProductDetailPage.jsx # /product/:id — Full product view
-    ├── CartPage.jsx          # /cart — Cart management
-    ├── LoginPage.jsx         # /login — Auth form
-    └── CheckoutPage.jsx      # /checkout — 3-step checkout (protected)
+│   ├── cart/OrderSummary.jsx
+│   ├── product/ProductCard.jsx
+│   ├── product/QtyControl.jsx
+│   └── ui/
+│       ├── Badge.jsx
+│       ├── FormField.jsx
+│       ├── Spinner.jsx
+│       └── Stars.jsx
+├── pages/
+│   ├── auth/
+│   │   ├── LoginPage.jsx
+│   │   └── RegisterPage.jsx
+│   ├── cart/
+│   │   ├── CartPage.jsx
+│   │   └── CheckoutPage.jsx
+│   ├── product/ProductDetailPage.jsx
+│   ├── shop/
+│   │   ├── CategoryPage.jsx
+│   │   ├── HomePage.jsx
+│   │   ├── OffersPage.jsx
+│   │   └── SearchPage.jsx
+│   └── user/
+│       ├── OrdersPage.jsx
+│       ├── OrderSuccessPage.jsx
+│       └── WishlistPage.jsx
+└── routes/
+    ├── AppRoutes.jsx
+    └── ProtectedRoute.jsx
 ```
 
 ## 🧩 Key Features
 
-| Feature | Implementation |
-|---------|---------------|
-| Component Architecture | Modular, reusable components |
-| Global State | React Context API (Auth + Cart) |
-| Local State | useState for UI, forms, toggles |
-| Side Effects | useEffect for API calls |
-| API Integration | Axios + fakestoreapi.com |
-| Routing | React Router v6 |
-| Protected Routes | ProtectedRoute component |
-| Cart Persistence | localStorage sync |
-| Auth Persistence | localStorage (JWT-like token) |
-| Search & Filter | Live client-side filtering |
-| Form Validation | Custom validators.js utility |
-
-## 🔑 Demo Login
-
-Use **any valid email** + **any password (6+ characters)** to sign in.
-
-> Example: `user@example.com` / `password123`
+- Product listing, category filters, search, and offers page
+- Product details with quantity selection
+- Shopping cart management with localStorage persistence
+- Wishlist and order flow
+- User authentication using context and localStorage
+- Protected routes for checkout and user pages
+- Responsive UI with reusable components
 
 ## 📦 Tech Stack
 
-- **React 18** — UI library
-- **React Router v6** — Client-side routing
-- **Axios** — HTTP client
-- **Vite** — Build tool & dev server
-- **Fake Store API** — `https://fakestoreapi.com`
+- React 18
+- React Router v6
+- Vite
+- Axios
+- Framer Motion
+
+## 📌 GitHub Ready Files
+
+This repository includes the key files needed for GitHub:
+
+- `README.md` — Project overview and setup instructions
+- `.gitignore` — Ignore Node modules, build output, and local env files
+- `package.json` — Project metadata and scripts
+- `.eslintrc.cjs` — Linting rules for React and JSX
+- `vite.config.js` — Vite build configuration
+- `LICENSE` — Project license
+- `CONTRIBUTING.md` — Contribution guidelines
+- `CODE_OF_CONDUCT.md` — Community behavior guide
+- `SECURITY.md` — Security policy and disclosure notes
+- `CHANGELOG.md` — Release history and updates
+- `.github/` — issue and pull request templates
+- `src/` — Application source code
+- `public/` — Static assets and HTML template
+
+## ✅ Notes
+
+- Use the Vercel deployment link above when sharing this demo.
+- `npm run dev` launches the local development server.
+- `npm run build` creates the production bundle.
